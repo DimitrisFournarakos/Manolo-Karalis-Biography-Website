@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Βιογραφία Αθλητή Στίβου</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script> 
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+    <div id="container" class="grid">
+   
+        <header>
+            <h1>Βιογραφία Αθλητή Στίβου</h1>
+        </header>
+        
+        <nav class="main-navigation"> 
+            <ul class="menu">
+                <li><a href="#" datasection="bio">Βιογραφία</a></li>
+                <li><a href="#" datasection="photos">Φωτογραφίες</a></li>
+                <li><a href="#" datasection="distinctions">Διακρίσεις</a></li>
+                <li><a href="#" datasection="links">Σύνδεσμοι</a></li>
+                <li><a href="#" datasection="admin">Διαχείριση</a></li>
+            </ul>
+        </nav>
+
+        <aside class="sidebar">
+            
+            <div id="bio-submenu" class="submenu-container hidden">
+                <h3>Βιογραφικά Στοιχεία</h3>
+                <ul>
+                    <li><a href="#" class="bio-link" data-bio="personal">Προσωπικά</a></li>
+                    <li><a href="#" class="bio-link" data-bio="career">Αθλητική Πορεία</a></li>
+                </ul>
+            </div>
+
+            <div id="photos-submenu" class="submenu-container hidden">
+                <h3>Ομάδες Φωτογραφιών</h3>
+                <ul>
+                    <li><a href="#" class="photo-group-link" data-group="games">Αγώνες</a></li>
+                    <li><a href="#" class="photo-group-link" data-group="rewards">Βραβεία</a></li>
+                </ul>
+            </div>
+         
+            <div id="distinctions-submenu" class="submenu-container hidden">
+                <h3>Είδη Διακρίσεων</h3>
+                <ul>
+                    <li><a href="#" class="fetch-link" data-type="distinctions" data-category="national">Εθνικές</a></li>
+                    <li><a href="#" class="fetch-link" data-type="distinctions" data-category="international">Διεθνείς</a></li>
+                    <li><a href="#" class="fetch-link" data-type="distinctions" data-category="records">Ρεκόρ</a></li>
+                </ul>
+            </div>
+
+            <div id="links-submenu" class="submenu-container hidden">
+                <h3>Χρήσιμοι Σύνδεσμοι</h3>
+                <ul>
+                    <li><a href="#" class="fetch-link" data-type="links" data-category="interviews">Συνεντεύξεις</a></li>
+                    <li><a href="#" class="fetch-link" data-type="links" data-category="video">Βίντεο</a></li>
+                    <li><a href="#" class="fetch-link" data-type="links" data-category="web_links">Διαδικτυακοί Σύνδεσμοι</a></li>
+                </ul>
+            </div>
+    
+            <div id="admin-submenu" class="submenu-container hidden">
+                <h3>Μενού Διαχείρισης</h3>
+                <ul>
+                    <li id="menu-login"><a href="#" id="login-link">Σύνδεση</a></li>
+                    
+                    <li class="admin-only hidden">
+                        <a href="#" class="parent-link">Διαχείριση Διακρίσεων</a>
+                        <ul class="sub-menu hidden">
+                            <li><a href="#" id="link-add-dist">Πρόσθεση</a></li>
+                            <li><a href="#" id="link-edit-dist">Αλλαγή/Διαχείριση</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-only hidden">
+                        <a href="#" class="parent-link">Διαχείριση Συνδέσμων</a>
+                        <ul class="sub-menu hidden">
+                            <li><a href="#" id="link-add-link">Πρόσθεση</a></li>
+                            <li><a href="#" id="link-edit-link">Αλλαγή/Διαχείριση</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-only hidden"><a href="#" id="link-logout">Αποσύνδεση</a></li>
+                </ul>
+            </div>         
+        </aside>
+
+        <main class="content-area">
+
+            <div id="bio-content" class="main-content-section hidden">
+                    
+                    <div id="bio-intro">
+                        <h2>Καλωσήρθατε στον κόσμο του "Μανόλο"</h2>
+                        <p>
+                            Ανακαλύψτε τη διαδρομή του <strong>Εμμανουήλ Καραλή</strong>, του αθλητή που με το πηγαίο χαμόγελο και το αγωνιστικό του πείσμα που κατέκτησε την κορυφή του παγκόσμιου στίβου. 
+                        </p>
+                        <p>
+                            Από τα πρώτα του άλματα στην Αθήνα μέχρι το ιστορικό χάλκινο μετάλλιο στους Ολυμπιακούς Αγώνες του Παρισιού και το "φράγμα" των 6 μέτρων, περιηγηθείτε στις στιγμές που διαμόρφωσαν την πορεία του.
+                        </p>
+                        <div class="navigation-hint">
+                            <p><em>Χρησιμοποιήστε το <strong>πλευρικό μενού</strong> στα αριστερά για να εξερευνήσετε τα προσωπικά του στοιχεία και την αθλητική του εξέλιξη.</em></p>
+                        </div>
+                    </div>
+
+                    <div id="bio-personal" class="bio-section hidden">
+                        <h3>Προσωπικά Στοιχεία</h3>
+                        <div class="bio-flex-container">
+                            <div class="bio-text">
+                                <p><strong>Όνομα:</strong> Εμμανουήλ (Μανόλο) Καραλής</p>
+                                <p><strong>Άθλημα:</strong> Άλμα επί κοντώ</p>
+                                <p>
+                                    Ο Εμμανουήλ Καραλής γεννήθηκε στις 20 Οκτωβρίου 1999 στην Αθήνα. 
+                                    Μεγαλωμένος σε μια αθλητική οικογένεια, με πατέρα πρωταθλητή του δεκάθλου 
+                                    και μητέρα αθλήτρια του μήκους, ο «Μανόλο» βρήκε το δικό του δρόμο στο 
+                                    άλμα επί κοντώ. Η επιμονή του και το πηγαίο του χαμόγελο τον έχουν κάνει 
+                                    έναν από τους πιο αγαπητούς αθλητές στην Ελλάδα, ενώ η κορυφαία στιγμή 
+                                    της μέχρι τώρα πορείας του ήταν η κατάκτηση του χάλκινου μεταλλίου 
+                                    στους Ολυμπιακούς Αγώνες του Παρισιού το 2024.
+                                </p>
+                            </div>
+                            <div class="bio-image-container">
+                                <img src="images/photo9.jpg" alt="Εμμανουήλ Καραλής" class="personal-photo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="bio-career" class="bio-section hidden">
+                        <h3>Αθλητική Πορεία</h3>
+                        <div class="bio-flex-container">
+                            <div class="bio-text">
+                                <p>
+                                    Η ενασχόληση του Εμμανουήλ Καραλή με τον στίβο ξεκίνησε από τον Γ.Σ. Κηφισιάς, όπου γρήγορα ξεχώρισε για την τεχνική και το αγωνιστικό του πνεύμα.
+                                    Ήδη από το 2016, σε ηλικία μόλις 16 ετών, τράβηξε τα βλέμματα της παγκόσμιας κοινότητας καταρρίπτοντας το παγκόσμιο ρεκόρ παίδων με άλμα στα 5,53μ.,
+                                    ενώ την ίδια χρονιά στέφθηκε Πρωταθλητής Ευρώπης στην κατηγορία Κ18 στην Τιφλίδα.
+                                </p>
+                                <p>
+                                    Η μετάβασή του στην κατηγορία των ανδρών συνοδεύτηκε από σταθερή ανοδική πορεία, παρά τους τραυματισμούς που αντιμετώπισε. Στους Ολυμπιακούς Αγώνες
+                                    του Τόκιο (2021) κατέλαβε την εντυπωσιακή 4η θέση, δείχνοντας ότι ανήκει στην ελίτ. Το 2023 κατέκτησε το πρώτο του μεγάλο μετάλλιο σε επίπεδο ανδρών,
+                                    το ασημένιο στο Ευρωπαϊκό Πρωτάθλημα Κλειστού Στίβου στην Κωνσταντινούπολη.
+                                </p>
+                                <p>
+                                    Το 2024 αποτέλεσε τη χρονιά της απόλυτης καθιέρωσης. Ξεκίνησε με το χάλκινο μετάλλιο στο Παγκόσμιο Κλειστού στη Γλασκόβη, ακολούθησε το ασημένιο στο
+                                    Ευρωπαϊκό της Ρώμης και κορυφώθηκε με το χάλκινο Ολυμπιακό μετάλλιο στο Παρίσι. Τον Αύγουστο του ίδιου έτους, στο Diamond League της Σιλεσίας, έγινε
+                                    ο πρώτος Έλληνας που ξεπέρασε το "φράγμα" των 6 μέτρων (6,00μ.), ενώ το 2025 βελτίωσε το πανελλήνιο ρεκόρ στον κλειστό στίβο με το εντυπωσιακό 6,05μ.
+                                </p>
+                            </div>
+                            <div class="bio-image-container">
+                                <img src="images/photo5.jpg" alt="Εμμανουήλ Καραλής - Αγώνας" class="personal-photo">
+                            </div>
+                        </div>
+                    </div>
+            </div> <div id="photos-content" class="main-content-section hidden">
+                <div id="photos-intro" class="photos-intro">
+                    <h2>Φωτογραφίες</h2>
+                    <p>
+                        Καλώς ορίσατε στη συλλογή φωτογραφιών του <strong>Εμμανουήλ Καραλή</strong>. 
+                        Εδώ μπορείτε να περιηγηθείτε στις πιο έντονες στιγμές της αθλητικής του πορείας, 
+                        από την προετοιμασία και τους μεγάλους αγώνες, μέχρι τις στιγμές της απόλυτης δικαίωσης στο βάθρο.
+                    </p>
+                    <div class="navigation-hint">
+                        <p><em>Επιλέξτε μια κατηγορία από το <strong>πλευρικό μενού</strong> για να δείτε το αντίστοιχο άλμπουμ.</em></p>
+                    </div>
+                </div>
+    
+                <div id="photos-games" class="photo-group-content photos-flex-container hidden-group">
+                    <div class="photo-item">
+                        <img src="images/photo1.jpg" alt="Άλμα">
+                        <p>Το Εκπληκτικό Άλμα που χάρησε στον Μανόλο την Παγκόσμια Διάκριση</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/photo2.jpg" alt="Πρωτάθλημα">
+                        <p>Παγκόσμιο Πρωτάθλημα Κλειστού Στίβου στη Γλασκόβη</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/photo5.jpg" alt="Άλμα-Ρώμη">
+                        <p>Ο "ιπτάμενος" Μανόλο σε μια εντυπωσιακή προσπάθεια στο Ευρωπαϊκό Πρωτάθλημα της Ρώμης</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/photo6.jpg" alt="Τερματισμός">
+                        <p>Χαρά και Ενθουσιασμός για την κατάκτηση του Χάλκινου Μεταλλίου</p>
+                    </div>
+                </div>
+
+                <div id="photos-rewards" class="photo-group-content photos-flex-container hidden-group">
+                    <div class="photo-item">
+                        <img src="images/photo3.jpg" alt="Βραβείο">
+                        <p>Ο Εμμανουήλ Καραλής παραλαμβάνει το βραβείο του Κορυφαίου Έλληνα Αθλητή για το 2025</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/photo4.jpg" alt="Ολυμπιακό Μετάλλιο">
+                        <p>Κατάκτηση του Χάλκινου Ολυμπιακού Μεταλλίου στο Παρίσι το 2024</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/photo7.jpg" alt="Στιγμές Συγκίνησης">
+                        <p>Δάκρυα Χαράς και Δικαίωσης, μετά από την Επιτυχία του στον Αγώνα</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/photo8.jpg" alt="Γονείς">
+                        <p>Ο Εμμανουήλ Καραλής με τους γονείς του στα βραβεία ΠΣΑΤ</p>
+                    </div>
+                </div>
+            </div> <div id="distinctions-content" class="main-content-section hidden">
+                <div id="distinctions-intro" class="intro-box">
+                    <h2>Αθλητικές Διακρίσεις & Επιτεύγματα</h2>
+                    <p>
+                        Η πορεία του <strong>Εμμανουήλ Καραλή</strong> στους στίβους αποτελεί μια διαδρομή συνεχούς εξέλιξης, 
+                        απόλυτης προσήλωσης και ιστορικών επιδόσεων. Από τις πρώτες του διεθνείς συμμετοχές ως έφηβος 
+                        μέχρι την ανάδειξή του σε έναν από τους κορυφαίους επικοντιστές του πλανήτη, ο «Μανόλο» έχει 
+                        συνδέσει το όνομά του με μερικές από τις πιο λαμπρές σελίδες του ελληνικού κλασικού αθλητισμού.
+                    </p>
+                    <p>
+                        Σε αυτή την ενότητα μπορείτε να ανατρέξετε αναλυτικά στα μετάλλια που κατέκτησε σε Εθνικό και 
+                        Διεθνές επίπεδο, καθώς και στα Πανελλήνια και Παγκόσμια ρεκόρ που κατέρριψε, συμπεριλαμβανομένης 
+                        της ιστορικής υπέρβασης των <strong>6 μέτρων</strong>.
+                    </p>
+                    <div class="navigation-hint">
+                        <p><em>Χρησιμοποιήστε το <strong>πλευρικό μενού</strong> για να περιηγηθείτε στις κατηγορίες των μεταλλίων και των ρεκόρ.</em></p>
+                    </div>
+                </div>
+                <div id="distinctions-results"></div>
+            </div> <div id="links-content" class="main-content-section hidden">
+                <div id="links-intro" class="intro-box">
+                    <h2>Σύνδεσμοι & Πολυμέσα</h2>
+                    <p>
+                        Μείνετε σε επαφή με τον ψηφιακό κόσμο του <strong>Εμμανουήλ Καραλή</strong>. Η δράση του "Μανόλο" 
+                        επεκτείνεται μέσα από μια έντονη παρουσία στα μέσα κοινωνικής δικτύωσης, 
+                        ενδιαφέρουσες συζητήσεις και οπτικοακουστικό υλικό που εμπνέει τη νέα γενιά αθλητών.
+                    </p>
+                    <p>
+                        Εδώ μπορείτε να βρείτε συγκεντρωμένες τις σημαντικότερες <strong>συνεντεύξεις</strong> του, 
+                        <strong>βίντεο</strong> με τις κορυφαίες του επιδόσεις από παγκόσμια meetings, καθώς και 
+                        τους επίσημους <strong>διαδικτυακούς συνδέσμους</strong> (social media) για να παρακολουθείτε 
+                        την καθημερινότητά του και το πρόγραμμα των αγώνων του σε πραγματικό χρόνο.
+                    </p>
+                    <div class="navigation-hint">
+                        <p><em>Επιλέξτε μια κατηγορία από το <strong>πλευρικό μενού</strong> για να δείτε το αντίστοιχο περιεχόμενο.</em></p>
+                    </div>
+                </div>
+                <div id="links-results"></div>    
+            </div> <div id="admin-content" class="main-content-section hidden">
+                
+                <div id="login-container">
+                    <h3>Σύνδεση Διαχειριστή</h3>
+                    <form id="login-form">
+                        <label>Username:</label>
+                        <input type="text" id="username" required>
+                        <br>
+                        <label>Password:</label>
+                        <input type="password" id="password" required>
+                        <br>
+                        <button type="submit">Είσοδος</button>
+                    </form>
+                </div>
+                <div id="admin-main-view" class="hidden">
+                    <div id="admin-welcome-msg">
+                        <h3>Καλώς ήρθατε στο περιβάλλον Διαχείρισης</h3>
+                        <p>Παρακαλώ επιλέξτε μία λειτουργία από το πλευρικό μενού στα αριστερά.</p>
+                    </div>
+                    <div id="management-form-container"></div>
+                </div>
+            </div> </main>
+        
+        <footer>
+            <p>© 2026</p>
+        </footer>
+
+    </div>
+</body>
+</html>

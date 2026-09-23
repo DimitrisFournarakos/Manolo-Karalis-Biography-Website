@@ -1,0 +1,498 @@
+/* Μηδενισμός περιθωρίων της ιστοσελίδας όλων των στοιχείων */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Σχεδίαση διάταξης σελίδας με grid*/
+/* Εφαρμογή της Grid Layout */
+#container {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 220px 1fr; 
+    gap: 0.5px;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+         'header header'
+         'nav nav'
+         'aside main'
+         'footer footer';
+}
+header,nav,aside,main,footer{
+    border:none;
+    
+}   
+header{grid-area: header;}
+nav{grid-area: nav;}
+aside{grid-area: aside;}
+main{grid-area: main;}
+footer{grid-area: footer;} 
+
+/* ---ΣΤΥΛ ΓΙΑ ΤΟ ΚΕΝΤΡΙΚΟ ΜΕΝΟΥ (NAV) ΜΕ FLOAT--- */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Για να περιλάβει τα float li */
+}
+
+.main-navigation li {
+    float: left; /* Κάνει τις επιλογές οριζόντιες,με αριστερή στοίχιση */
+    position: relative; /* Για να τοποθετηθούν τα submenus σχετικά με το γονικό li */
+}
+
+.main-navigation a {
+    display: block;
+    padding: 12px 18px;
+    color: white;
+    text-decoration:none;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+/* Κλάση για την αρχική απόκρυψη όλων των submenus */
+.hidden {
+    display: none !important;
+}
+
+/* Στυλ για κάθε στοιχείο (photo-item) */
+.photo-item {
+    flex: 0 1 calc(50% - 20px);
+    min-width: 250px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+/*Κλάση για απόκρυψη επιμέρους ομάδων(Αγώνες,Προπονήσεις)*/
+.hidden-group{
+    display: none !important;
+}
+
+/* Στυλ για τους πίνακες δεδομένων */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+
+/* Μορφοποίηση των πινάκων διαχείρισης */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background-color: #0b7dda;
+}
+
+/*Βιογραφία Αθλητή*/
+.bio-section {
+    margin-top: 20px;
+}
+
+
+/* Όμορφο gradient background για ολόκληρο site */
+body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    transition: background 0.5s ease;
+}
+
+/* Κεντρικές ενότητες (main-content-section) με κάρτες και σκιές */
+.main-content-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Κεφαλίδες */
+h2 {
+    color: #1f3a93;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs και table text */
+p, td {
+    line-height: 1.6;
+}
+
+/* Εφέ για πίνακες δεδομένων */
+.data-table th {
+    background-color: #e6f0fa;
+    color: #1f3a93;
+}
+
+.data-table tr:hover {
+    background-color: #f1f6fb;
+    transition: background 0.3s ease;
+}
+
+/* Κουμπιά */
+button, .edit-btn, .delete-btn {
+    transition: all 0.2s ease;
+}
+
+.main-content-section:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================== Header / Nav Background ================== */
+header, nav {
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: url('../images/track.png') repeat;
+    background-size: 150px; /* Ελέγχει το μέγεθος του μοτίβου */
+    opacity: 0.08; /* Το αύξησα ελάχιστα για να είναι ορατό στο μπλε */
+    mix-blend-mode: overlay; /* Κάνει το pattern να φαίνεται σαν ανάγλυφο */
+    pointer-events: none;
+    z-index: 1;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2; /* Το κείμενο να είναι πάνω από το pattern */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 8px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Container για το Flexbox στην βιογραφία */
+.bio-flex-container {
+    display: flex;
+    align-items: flex-start; /* Ευθυγράμμιση στην κορυφή */
+    gap: 30px; /* Απόσταση ανάμεσα σε κείμενο και εικόνα */
+    margin-top: 20px;
+}
+
+/* Ρυθμίσεις κειμένου */
+.bio-text {
+    flex: 2; /* Το κείμενο θα πιάνει περισσότερο χώρο */
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Ρυθμίσεις εικόνας */
+.bio-image-container {
+    flex: 1; /* Η εικόνα θα πιάνει λιγότερο χώρο */
+    max-width: 250px; /* Περιορισμός μεγέθους για να είναι "μικρή" */
+}
+
+.personal-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Στρογγυλεμένες γωνίες */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Μια ελαφριά σκιά */
+    border: 3px solid #f0f0f0;
+}
+
+/* Βασικό στυλ για το κουμπί μετάβασης */
+.action-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #2c3e50; /* Σκούρο μπλε/γκρι χρώμα */
+    color: #ffffff !important; /* Λευκά γράμματα */
+    text-decoration: none !important; /* Αφαίρεση υπογράμμισης */
+    border-radius: 4px; /* Ελαφρώς στρογγυλεμένες γωνίες */
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Ομαλή αλλαγή στο hover */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Εφέ όταν περνάει το ποντίκι από πάνω (Hover) */
+.action-link:hover {
+    background-color: #34495e;
+    transform: translateY(-2px); /* Μικρή ανασήκωση */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+/* Εφέ όταν το πατάμε (Active) */
+.action-link:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Στοίχιση περιεχομένου στα κελιά του πίνακα */
+.data-table td {
+    vertical-align: middle; /* Κάθετο κεντράρισμα για απλό κείμενο */
+    text-align: center;      /* Οριζόντιο κεντράρισμα για απλό κείμενο */
+}
+
+
+/*Μορφοποίηση εισαγωγικού κειμένου Βιογραφίας*/
+#bio-intro {
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+#bio-intro h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.navigation-hint {
+    margin-top: 25px;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+}
+
+/* Flexbox Grid για τις Φωτογραφίες */
+.photos-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Επιτρέπει την αλλαγή σειράς */
+    gap: 20px;       /* Απόσταση μεταξύ των καρτών */
+    justify-content: center;
+    padding: 20px 0;
+}
+
+
+/* Ρυθμίσεις για τις φωτογραφίες ώστε να μην κόβονται */
+.photo-item img {
+    width: 100%;           /* Πιάνει όλο το πλάτος της κάρτας */
+    height: auto;          /* Το ύψος προσαρμόζεται αυτόματα για να μη χαλάει η αναλογία */
+    aspect-ratio: 3 / 2;   /* Δίνει ένα ομοιόμορφο σχήμα σε όλες */
+    object-fit: contain;   /* Δείχνει ΟΛΟΚΛΗΡΗ τη φωτογραφία μέσα στο πλαίσιο */
+    background-color: #f0f0f0; /* Προσθέτει ένα απαλό φόντο αν η φωτογραφία είναι πιο μικρή */
+    border-radius: 6px;
+}
+
+
+/* --- Responsive Design (Tablet & Κινητά) --- */
+@media screen and (max-width: 768px) {
+    /* Μετατρέπουμε το Grid σε μία στήλη */
+    #container {
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            'header'
+            'nav'
+            'aside'
+            'main'
+            'footer';
+        height: auto; /* Επιτρέπουμε στη σελίδα να μεγαλώνει σε ύψος */
+    }
+
+    /* Το πλευρικό μενού πιάνει όλο το πλάτος */
+    aside {
+        width: 100%;
+        box-sizing: border-box;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Η κύρια ενότητα (Βιογραφία κλπ) πιάνει όλο το πλάτος */
+    main {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .main-content-section {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Διόρθωση για την εικόνα στη Βιογραφία (να μπαίνει κάτω από το κείμενο ή πάνω) */
+    .bio-flex-container {
+        flex-direction: column; /* Η εικόνα και το κείμενο μπαίνουν το ένα κάτω από το άλλο */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .bio-text {
+        order: 2; /* Το κείμενο δεύτερο */
+        width: 100%;
+    }
+
+    .bio-image-container {
+        order: 1; /* Η εικόνα πρώτη για να φαίνεται αμέσως */
+        width: 100%;
+        max-width: 300px; /* Λίγο μεγαλύτερη στο κινητό για να φαίνεται καθαρά */
+    }
+
+    /* Το οριζόντιο μενού γίνεται κάθετο */
+    .main-navigation li {
+        float: none;
+        width: 100%;
+    }
+}
+
+.main-navigation a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%; /* Ξεκινάει έξω από το ορατό πεδίο */
+    width: 100%;
+    height: 3px;
+    background-color: #ffd700; /* Χρώμα χρυσού μεταλλίου */
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.main-navigation a:hover {
+    /* Μόνο μετακίνηση προς τα δεξιά */
+    transform: translateX(8px); 
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    box-shadow: -3px 0px 8px rgba(0,0,0,0.2);
+}
+
+.main-navigation a:hover::before {
+    left: 0; /* Η γραμμή υπογράμμισης "τρέχει" στη θέση της */
+}
+
+/* Εφέ για το κλικ */
+.main-navigation a:active {
+    transform: scale(0.95); /* Μικρό "βύθισμα" κατά το πάτημα */
+}
+
+/* Η χρυσή γραμμή για το πλευρικό μενού */
+aside a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px; /* Ελαφρώς πιο λεπτή για το πλάι */
+    background-color: #ffd700;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+aside a:hover {
+    transform: translateX(10px); /* Μετακίνηση προς τα δεξιά */
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    color: #1a4a8e !important; /* Σκούρο μπλε για να διαβάζεται στο λευκό/γκρι background */
+    box-shadow: -2px 0px 5px rgba(0,0,0,0.1);
+}
+
+aside a:hover::before {
+    left: 0; /* Η γραμμή ενεργοποιείται */
+}
+
+/* Εφέ για το κλικ στις υποενότητες */
+aside a:active {
+    transform: scale(0.98);
+}
