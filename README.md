@@ -2,7 +2,7 @@
 
 > **A Single Page Application showcasing the biography of Emmanouil Karalis, Olympic pole vaulter.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge&logo=vercel)](https://karalis-biography-spa.vercel.app/)
+![Live Demo](https://karalis-biography-spa.vercel.app/#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?logo=node.js)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5.x-black?logo=express)](https://expressjs.com/)
