@@ -2,10 +2,15 @@
 
 > **A Single Page Application showcasing the biography of Emmanouil Karalis, Olympic pole vaulter.**
 
-![Live Demo](https://karalis-biography-spa.vercel.app/#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?logo=node.js)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5.x-black?logo=express)](https://expressjs.com/)
+
+---
+
+## Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge&logo=vercel)](https://karalis-biography-spa.vercel.app/#)
 
 ---
 
@@ -142,24 +147,6 @@ The project includes a protected admin panel for content management:
 |--------|----------|-------------|
 | `POST` | `/api/login` | Authentication, returns JWT token |
 | `POST` | `/api/add/:type` | Add data (links/distinctions) |
-
----
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push to GitHub
-2. Connect repo to [Vercel](https://vercel.com)
-3. Add `SECRET_KEY` to Environment Variables
-4. Deploy!
-
-The `vercel.json` is already configured for:
-- Static files serving from `/public`
-- Serverless functions for `/api/*`
-
-### Other Platforms
-Can run anywhere Node.js is supported (Railway, Render, Fly.io, etc.)
 
 ---
 
