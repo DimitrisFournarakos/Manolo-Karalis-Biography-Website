@@ -11,6 +11,7 @@ require('dotenv').config();
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
+
 if (!SECRET_KEY) {
     throw new Error('SECRET_KEY is not configured');
 }
