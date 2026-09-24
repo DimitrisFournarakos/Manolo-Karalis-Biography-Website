@@ -20,13 +20,13 @@ This project started as a **school assignment** for the **Web Development** cour
 
 After completing the course, I significantly refined and improved it to become a **professional portfolio project** that demonstrates my skills as a developer.
 
-### 🎯 Learning Objectives Covered
-- ✅ Single Page Application (SPA) architecture with vanilla JS
-- ✅ RESTful API design with Express.js
-- ✅ JWT-based authentication & authorization
-- ✅ File-based data persistence (JSON)
-- ✅ Responsive design & modern CSS
-- ✅ Deployment to Vercel (frontend + serverless functions)
+### ✅ Learning Objectives Covered
+-  Single Page Application (SPA) architecture with vanilla JS
+-  RESTful API design with Express.js
+-  JWT-based authentication & authorization
+-  File-based data persistence (JSON)
+-  Responsive design & modern CSS
+-  Deployment to Vercel (frontend + serverless functions)
 
 ---
 
