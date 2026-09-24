@@ -20,7 +20,7 @@ This project started as a **school assignment** for the **Web Development** cour
 
 After completing the course, I significantly refined and improved it to become a **professional portfolio project** that demonstrates my skills as a developer.
 
-### ✅ Learning Objectives Covered
+### Learning Objectives Covered
 -  Single Page Application (SPA) architecture with vanilla JS
 -  RESTful API design with Express.js
 -  JWT-based authentication & authorization
@@ -200,5 +200,5 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
-> **If you liked this project, give it a star on GitHub!**  
+> **⭐ If you liked this project, give it a star on GitHub!**  
 > It's a small gesture that helps a lot with visibility.
