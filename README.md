@@ -187,7 +187,7 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 ## Author
 
 **Dimitris Fournarakos**
-- GitHub: [@DimitrisFournarakos](https://github.com/DimitrisFournarakos)
+- GitHub: [DimitrisFournarakos](https://github.com/DimitrisFournarakos)
 - Email: dfournarakos567@gmail.com
 
 ---
